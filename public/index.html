@@ -187,13 +187,13 @@
 
   <script>
     document.querySelectorAll(".card").forEach(card => {
-      card.addEventListener("click", () => {
-        const gameFile = card.getAttribute("data-game");
-        if (gameFile) {
-          window.location.href = `game.html?game=${encodeURIComponent(gameFile)}`;
-        }
-      });
-    });
+  card.addEventListener("click", () => {
+    const gameFile = card.getAttribute("data-game");
+    if (gameFile) {
+      window.location.href = gameFile;
+    }
+  });
+});
 
     function filterCards() {
       const search = document.getElementById("searchInput").value.toLowerCase();
@@ -209,6 +209,3 @@
 
 </body>
 </html>
-
-
-
