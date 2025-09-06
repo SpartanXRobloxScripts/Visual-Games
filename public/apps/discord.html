@@ -1,23 +1,26 @@
+<Module>
+<ModulePrefs title="Discord - Open Web App" />
+<Content type="html"><![CDATA[
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-  <title>Discord Embed</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AndreajnRcm4/b398dl2h74v@9a23fbb2373d743a564873251cbb57736ebc1f73/style.css" type="text/css" />
-  <style>
-    /* small helper so iframe fills page */
-    html,body { height:100%; margin:0; }
-    .discord-frame { width:100%; height:100vh; border:0; }
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Open Discord</title>
+  <style>html,body{height:100%;margin:0;display:flex;align-items:center;justify-content:center}
+    .btn{padding:18px 28px;border-radius:10px;text-decoration:none;font-weight:700;}
   </style>
 </head>
 <body>
-  <!-- Replace YOUR_SERVER_ID with the numeric ID of your server -->
-  <iframe class="discord-frame"
-    src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=dark"
-    allowtransparency="true"
-    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
-  </iframe>
+  <div>
+    <a class="btn" href="https://discord.com/app" target="_blank" rel="noopener noreferrer">Open Discord Web App (full client)</a>
+    <p>If you want an in-page chat, use the WidgetBot or Discord widget instead.</p>
+  </div>
+  <script>
+    // Optional: auto-redirect to Discord web (uncomment if you want immediate redirect rather than a button)
+    // window.location.href = "https://discord.com/app";
+  </script>
 </body>
 </html>
+]]></Content>
+</Module>
