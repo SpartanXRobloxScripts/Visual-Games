@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sentry X | Games</title>
+  <title>Sentry X | Home</title>
   <link rel="icon" href="https://mmsgames.vercel.app/Logo125.png" type="image/png">
   <style>
     * {
@@ -58,52 +58,62 @@
       50% { box-shadow: 0 0 12px rgb(40, 140, 255), 0 0 15px rgba(151, 40, 255, 0.9); }
     }
 
-    .search-container {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      width: 100%;
-      max-width: 600px;
-    }
-
-    .search-container input {
-      flex-grow: 1;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 15px;
-      font-size: 16px;
-      color: rgb(225, 225, 225);
-      background-color: #1e1e1e;
-      outline: none;
-      transition: box-shadow 0.3s ease;
-    }
-
-    .search-container input:focus {
-      box-shadow: 0 0 0 2px #00aaff;
-    }
-
-    .search-container input::placeholder {
-      color: rgb(125, 125, 125);
-    }
-
-    .search-container button {
-      background-color: #592bff;
-      border: none;
+    .game-director {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #2b52ff;
       color: white;
-      padding: 10px 20px;
+      width: 135px;
+      height: 40px;
+      text-align: center;
       border-radius: 15px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 0 15px rgba(87, 40, 255, 0.8), 0 0 25px rgba(151, 40, 255, 0.6);
-      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 0 10px rgba(40,133,255,0.6), 0 0 12px rgba(40, 72, 255, 0.8);
+      justify-content: center;
+      align-items: center;
+      transition: all 0.25s ease;
+      display: flex;
     }
 
-    .search-container button:hover {
-      transform: scale(0.96);
+    .game-director:hover {
+      scale: 0.98;
     }
 
-    .search-container button:active {
-      transform: scale(0.90);
+    .game-director:active {
+      scale: 0.95;
+    }
+
+    .page-title {
+      background: linear-gradient(90deg,rgba(40,133,255,0.6),rgba(151, 40, 255, 0.9));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 10px;
+      
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 75px;
+      animation: fadeIn 1.5s ease backwards;
+    }
+
+    .page-desc {
+      color: whitesmoke;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 25px;
+      animation: fadeIn 2.5s ease backwards;
+      word-wrap: break-word;
+      width: 500px;
+      text-align: center;
+      display: flex;
+      justify-items: center;
+
+    }
+
+    @keyframes fadeIn {
+      from {                       /* starting point */
+    opacity: 0;
+    transform: translateY(20px);
+  }
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
     }
 
     .cards-wrapper {
@@ -143,7 +153,6 @@
       right: 0;
       background: rgba(0, 0, 0, 0.7);
       color: white;
-      text-align: center;
       padding: 10px;
       opacity: 0;
       transition: opacity 0.3s ease;
@@ -234,333 +243,19 @@
 
 
 <body>
-
-  <div class="top-panel">
-    <img src="https://mmsgames.vercel.app/Logo125.png" alt="Sentry X Logo" />
-    <h1>Sentry X</h1>
-    <div class="right-side">
-    <img src="https://mmsgames.vercel.app/icons/Games.png"onclick="window.location.href='https://mmsgames.vercel.app/games.html'"></img>
-    <img src="https://mmsgames.vercel.app/icons/Discord.png"onclick="window.open('https://discord.gg/TKvhCRkajT', '_blank')"></img>
-    <img src="https://mmsgames.vercel.app/icons/TOS.png"onclick="window.location.href='https://docs.google.com/document/d/1oW54dmtFARwzJp9Uu3OymB3GWxLT7_kjolLLpT-CXEM/edit?tab=t.0'"></img>
-  </div>
-  </div>
-
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search for one of a multitude of games." />
-  </div>
-
   
-<!--
-  <div id="notificationOverlay">
-  <div id="notificationBox">
-    <div id="notificationTitle">Sentry X ToS, Guidelines, tutorials, etc..</div>
-    <div id="notificationContent">
-      <p>   Hello, this is the owner of the website (Noah). I really appreciate the support on this website. I will be rolling out new updates weekly (every weekend). Also, please agree to the Terms of Service (TOS), which is listed on the website. You can send me an Email (nhogue7753@madison.k12.al.us) if you have any issues or ideas about this website. Anyway, have fun on this website!</p>
-      <p>
-            If you have not read the rules already, please do so. It's highly recommended, and we do not encourage you to use this website without going through the ToS (Terms of Service) first. We would like to also point out that this website is for EDUCATIONAL PURPOSES ONLY. This website should only be used at appropriate times only. Refusing to follow the ToS (Terms of Service), or any rules listed in this notification, will get you blacklisted (Email blocked from this website).
-      </p>
+<div class="page-desc">Please go to my new site, it will have a proxy and everything.
 
-      <p>
-                    As stated earlier, my name is Noah. This is really just a side project of mine that I am creating for fun, it's not anything that I am going to try and make viral. But if it does, then cool. I might make this website open source if it does go viral. But I'm a student at MMS, and I'm just a student who loves coding. I like to code, play video games, and play soccer in my free-time. I decided that I wanted to make this website for fun because a BUNCH of websites, like Coolmath, Gamechy, and heck, even Red's Exploits Corner got blocked. If you don't know what Cool Math Games is, then you've been living under a rock; simple.
-      </p>
-
-       <p>
-        I'm writing all of this stuff on 8/17/25, the sunday before school starts again. I'm writing this because I'm bored. This notification system is really just going to be for listing updates, but since I really just started roling out updates, well, I'm not really going to do that stuff right now. Anyway, if you are wanting any more games to be added, then just DM me on Discord or send me an Email; my Email is listed above.
-      </p>
-
-      <p>
-        This website will be updated the Friday, Saturday, or Sunday after Linewize blocks the website. I'm not just going to abondan this website after Linewize blocks it. I hope that we can watch this community grow larger and larger everyday, and I hope that you can be apart of the community. Anyway, have a nice day!
-      </p>
-
-      <p>
-        COPYRIGHT Sentry X 2025: All Rights Reserved.
-      </p>
-
-    </div>
-    <button id="notificationConfirm">Confirm</button>
-  </div>
+  Also, please consider actually doing your work instead of playing games on my website. tehee~
 </div>
--->
-  
-
-
-  <div class="cards-wrapper" id="cardsWrapper">
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Drift%20Boss/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/DriftBoss.png" alt="Drift Boss" />
-      <div class="title">Drift Boss</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/snowrider.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/SnowRider.png" alt="Snow Rider 3D" />
-      <div class="title">Snow Rider 3D</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Slope/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/Slope.png" alt="Slope" />
-      <div class="title">Slope</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/HexGL/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/HexGL.png" alt="HexGL" />
-      <div class="title">HexGL</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/FNAF/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/FNAF.png" alt="Five Nights At Freddies" />
-      <div class="title">Five Nights At Freddies</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Rooftop Snipers/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/RooftopSnipers.png" alt="Rooftop Snipers" />
-      <div class="title">Rooftop Snipers</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/OVO/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/OVO.png" alt="OVO" />
-      <div class="title">OVO</div>
-    </div>
-
-     <div class="card" data-game="https://mmsgames.vercel.app/games/Retro Bowl/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/RetroBowl.png" alt="Retro Bowl" />
-      <div class="title">Retro Bowl</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Geometry Dash/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/GeometryDash.png" alt="Geometry Dash" />
-      <div class="title">Geometry Dash</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Big Tower Tiny Square/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/BigTowerTinySquare.png" alt="Big Tower Tiny Square" />
-      <div class="title">Big Tower Tiny Square</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Space is Key/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/SpaceisKey.png" alt="Space is Key" />
-      <div class="title">Space is Key</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/FNF/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/FNF.png" alt="Friday Night Funkin" />
-      <div class="title">Friday Night Funkin</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Cookie Clicker/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/CookieClicker.png" alt="Cookie Clicker" />
-      <div class="title">Cookie Clicker</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Gimme the Airpod/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/Gimmetheairpod.png" alt="Gimme the Airpod" />
-      <div class="title">Gimme the Airpod</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Basketball Stars/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/BasketballStars.png" alt="Basketball Stars" />
-      <div class="title">Basketball Stars</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/1v1lol.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/1v1LOL.png" alt="1v1 LOL" />
-      <div class="title">1v1 LOL</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/paper.io/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/paper io.png" alt="paper.io" />
-      <div class="title">paper.io</div>
-    </div>
-    
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Red Ball/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/RedBall.png" alt="Red Ball" />
-      <div class="title">Red Ball</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Subway Surfers/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/SubwaySurfers.png" alt="Subway Surfers" />
-      <div class="title">Subway Surfers</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Run 3/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/Run3.png" alt="Run 3" />
-      <div class="title">Run 3</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/slither.io/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/slither.io.png" alt="slither.io" />
-      <div class="title">slither.io</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Opposite Day/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/OppositeDay.png" alt="Opposite Day" />
-      <div class="title">Opposite Day</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/Temple Run 2/index.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/TempleRun.png" alt="Temple Run 2" />
-      <div class="title">Temple Run 2</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/cluster rush.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/ClusterRush.png" alt="Cluster Rush" />
-      <div class="title">Cluster Rush</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/polytrack.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/Polytrack.png" alt="Poly Track" />
-      <div class="title">Poly Track</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/basketbros.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/Basketbros.png" alt="Basket Bros" />
-      <div class="title">Basket Bros</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/bottlejump.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/Bottlejump.png" alt="Bottle Jump 3D" />
-      <div class="title">Bottle Jump 3D</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/FNAF2.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/FNAF2.png" alt="Five Nights At Freddies 2" />
-      <div class="title">Five Nights At Freddies 2</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/FNAF3.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/FNAF3.png" alt="Five Nights At Freddies 3" />
-      <div class="title">Five Nights At Freddies 3</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/FNAF4.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/FNAF4.png" alt="Five Nights At Freddies 4" />
-      <div class="title">Five Nights At Freddies 4</div>
-    </div>
-
-     <div class="card" data-game="https://mmsgames.vercel.app/games/crossyroad.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/crossyroad.png" alt="Crossy Road" />
-      <div class="title">Crossy Road</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/motox3m.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/motox3m.png" alt="Moto X3M" />
-      <div class="title">Moto X3M</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/papapizza.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/Pizerria.png" alt="Papa's Pizerria" />
-      <div class="title">Papa's Pizerria</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/ducklife.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/ducklifereupload.png" alt="Duck Life" />
-      <div class="title">Duck Life</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/fruitninja.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/fruitninja.png" alt="Fruit Ninja" />
-      <div class="title">Fruit Ninja</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/btd2.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/btd.png" alt="Bloons Tower Defense 2" />
-      <div class="title">Bloons Tower Defense 2</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/pvz.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/pvz.png" alt="Plants vs. Zombies" />
-      <div class="title">Plants vs. Zombies</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/stickwar.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/stickwar.png" alt="Stick Wars" />
-      <div class="title">Stick Wars</div>
-    </div>
-
-     <div class="card" data-game="https://mmsgames.vercel.app/games/sonic.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/sonic.png" alt="1991 Sega Sonic" />
-      <div class="title">1991 Sega Sonic</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/pacman.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/pacman.png" alt="Pacman" />
-      <div class="title">Pacman</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/drifthunters.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/drifthunters.png" alt="Drift Hunters" />
-      <div class="title">Drift Hunters</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/2048.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/2048.png" alt="2048" />
-      <div class="title">2048</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/idlebreakout.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/idlebreakout.png" alt="Idle Breakout" />
-      <div class="title">Idle Breakout</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/stackball.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/stackball.png" alt="Stack Ball.io" />
-      <div class="title">Stack Ball.io</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/chromedino.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/chromedino2.png" alt="Chrome Dino Run" />
-      <div class="title">Chrome Dino Run</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/drawtheline.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/drawtheline.png" alt="Draw the Line" />
-      <div class="title">Draw the Line</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/baldisbasics.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/baldisbasics.png" alt="Baldi's Basics" />
-      <div class="title">Baldi's Basics</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/backrooms.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/backrooms.png" alt="Baldi's Basics" />
-      <div class="title">Backrooms</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/awesometanks.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/awesometanks.png" alt="Awesome Tanks" />
-      <div class="title">Awesome Tanks</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/awesometanks2.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/awesometanks2.png" alt="Awesome Tanks 2" />
-      <div class="title">Awesome Tanks 2</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/bloxorz.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/bloxorz.png" alt="Bloxorz" />
-      <div class="title">Bloxorz</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/tetris.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/tetris.png" alt="Tetris" />
-      <div class="title">Tetris</div>
-    </div>
-
-    <div class="card" data-game="https://mmsgames.vercel.app/games/dreadheadparkour.html">
-      <img src="https://mmsgames.vercel.app/Game%20Thumbnails/dhparkour.png" alt="Dreadhead Parkour" />
-      <div class="title">Dreadhead Parkour</div>
-    </div>
-
-
-  </div>
+<div class="game-director" onclick="window.open('https://noah.customcloudapp.net/home.html', '_blank')">Take me there</div>
 
   <script>
-document.querySelectorAll(".card").forEach(card => {
+    document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("click", () => {
     const gameFile = card.getAttribute("data-game");
     if (gameFile) {
-      // Encode the URL so it works in query string
-      const encoded = encodeURIComponent(gameFile);
-      window.location.href = `game.html?url=${encoded}`;
+      window.location.href = gameFile;
     }
   });
 });
@@ -575,17 +270,6 @@ document.querySelectorAll(".card").forEach(card => {
     }
 
     document.getElementById("searchInput").addEventListener("input", filterCards);
-
-  const cardsWrapper = document.getElementById('cardsWrapper');
-  const cards = Array.from(cardsWrapper.children);
-
-  cards.sort((a, b) => {
-    const titleA = a.querySelector('.title').textContent.toLowerCase();
-    const titleB = b.querySelector('.title').textContent.toLowerCase();
-    return titleA.localeCompare(titleB);
-  });
-
-  cards.forEach(card => cardsWrapper.appendChild(card));
   </script>
 
 
